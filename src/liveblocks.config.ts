@@ -39,7 +39,7 @@ export const {
     useErrorListener,
     useStorage,
 
-    useBatch,
+
     useHistory,
     useUndo,
     useRedo,
