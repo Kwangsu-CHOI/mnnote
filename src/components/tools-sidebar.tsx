@@ -15,9 +15,9 @@ export const ToolsSidebar = () => {
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetContent side="right" className="w-[400px] sm:w-[540px] flex flex-col p-0 h-full">
+      <SheetContent side="right" className="w-full sm:w-[540px] flex flex-col p-0 h-full">
         <SheetHeader className="p-4 border-b">
-          <SheetTitle className="flex items-center gap-2">
+          <SheetTitle className="flex items-center justify-center gap-2">
             <Sparkles className="h-5 w-5 text-primary" />
             Tools & Assistant
           </SheetTitle>
