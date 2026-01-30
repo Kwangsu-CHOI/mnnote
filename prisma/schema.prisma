@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Document {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  title          String
+  userId         String
+  isArchived     Boolean   @default(false)
+  parentDocumentId String?   @db.ObjectId
+  content        String?
+  coverImage     String?
+  icon           String?
+  isPublished    Boolean   @default(false)
+  collaborators  String[]  @default([])
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  parentDocument Document?  @relation("DocumentToDocument", fields: [parentDocumentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  childDocuments Document[] @relation("DocumentToDocument")
+
+  @@index([userId])
+}
