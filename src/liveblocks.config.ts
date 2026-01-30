@@ -38,9 +38,7 @@ export const {
     useEventListener,
     useErrorListener,
     useStorage,
-    useObject,
-    useMap,
-    useList,
+
     useBatch,
     useHistory,
     useUndo,
