@@ -24,7 +24,6 @@ export const searchDocuments = async (query: string) => {
         {
           content: {
             contains: query,
-            mode: "insensitive",
           },
         },
       ],

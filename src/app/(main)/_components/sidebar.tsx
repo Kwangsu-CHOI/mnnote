@@ -438,8 +438,8 @@ const SidebarContent = () => {
                   </div>
                 </PopoverTrigger>
                 <PopoverContent
-                  className="p-0 w-72"
-                  side={isMobile ? "bottom" : "right"}
+                  className="p-0 w-72 z-[100000]"
+                  side={isMobile ? "top" : "right"}
                 >
                   <TrashBox 
                     documents={trashDocuments} 
